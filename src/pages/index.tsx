@@ -31,13 +31,12 @@ export default function Home() {
       explorerUrl: "https://sepolia.etherscan.io/tx/",
     },
     {
-      chainId: 80001,
-      name: "Polygon Mumbai",
-      providerUrl: "https://rpc.ankr.com/polygon_mumbai",
-      incrementCountContractAdd: "0xc34E02663D5FFC7A1CeaC3081bF811431B096C8C",
-      biconomyPaymasterApiKey:
-        "-RObQRX9ei.fc6918eb-c582-4417-9d5a-0507b17cfe71",
-      explorerUrl: "https://mumbai.polygonscan.com/tx/",
+      chainId: 80002,
+      name: "Polygon Amoy",
+      providerUrl: "https://rpc-amoy.polygon.technology/",
+      incrementCountContractAdd: "0xfeec89eC2afD503FF359487967D02285f7DaA9aD",
+      biconomyPaymasterApiKey: "TVDdBH-yz.5040805f-d795-4078-9fd1-b668b8817642",
+      explorerUrl: "https://www.oklink.com/amoy/tx/",
     },
   ];
 
@@ -56,10 +55,10 @@ export default function Home() {
             }
           : {
               chainNamespace: CHAIN_NAMESPACES.EIP155,
-              chainId: "0x13881",
+              chainId: "0x13882",
               rpcTarget: chains[chainSelected].providerUrl,
-              displayName: "Polygon Mumbai",
-              blockExplorer: "https://mumbai.polygonscan.com/",
+              displayName: "Polygon Amoy",
+              blockExplorer: "https://www.oklink.com/amoy/",
               ticker: "MATIC",
               tickerName: "Polygon Matic",
             };
@@ -199,7 +198,7 @@ export default function Home() {
                 setChainSelected(1);
               }}
             >
-              Poly Mumbai
+              Poly Amoy
             </div>
           </div>
           <button
