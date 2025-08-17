@@ -66,7 +66,7 @@ export default function Home() {
       //Creating web3auth instance
       const web3auth = new Web3Auth({
         clientId:
-          "BExrkk4gXp86e9VCrpxpjQYvmojRSKHstPRczQA10UQM94S5FtsZcxx4Cg5zk58F7W1cAGNVx1-NPJCTFIzqdbs", // Get your Client ID from the Web3Auth Dashboard https://dashboard.web3auth.io/
+          "BPOUdMclUNO5Po-w0YQi0ofUDhYB6pBgtR37s8rIbXJZMkHe7-z8sdvnrc37YaM0VoI5t9A3eByUuf2TA4LU6Gs", // Get your Client ID from the Web3Auth Dashboard https://dashboard.web3auth.io/
         web3AuthNetwork: "sapphire_devnet", // Web3Auth Network
         chainConfig,
         uiConfig: {
@@ -81,7 +81,7 @@ export default function Home() {
         },
       });
 
-      await web3auth.initModal();
+      await web3auth.init();
       const web3authProvider = await web3auth.connect();
       const ethersProvider = new ethers.providers.Web3Provider(
         web3authProvider as any
@@ -90,7 +90,7 @@ export default function Home() {
 
       const config = {
         biconomyPaymasterApiKey: chains[chainSelected].biconomyPaymasterApiKey,
-        bundlerUrl: `https://bundler.biconomy.io/api/v2/${chains[chainSelected].chainId}/nJPK7B3ru.dd7f7861-190d-41bd-af80-6877f74b8f44`, // <-- Read about this at https://docs.biconomy.io/dashboard#bundler-url
+        bundlerUrl: `https://bundler.biconomy.io/api/v3/${chains[chainSelected].chainId}/bundler_Cp88SmXrQbAhSSChjpNVJJ`, // <-- Read about this at https://docs.biconomy.io/dashboard#bundler-url
       };
 
       const smartWallet = await createSmartAccountClient({
